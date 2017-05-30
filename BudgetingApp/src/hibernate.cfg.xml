@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:fiimdb</property>
+        <property name="hibernate.connection.username">fiimdb</property>
+        <property name="connection.password">fiimdb</property>
+        <property name="connection.pool_size">1</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">create</property>
+        
+        <mapping class="budgeting.app.example.Student" />
+        <mapping class="budgeting.app.example.Course" />
+        
+        <mapping class="budgeting.app.example.Category" />
+        <mapping class="budgeting.app.example.Stock" />
+        <mapping class="budgeting.app.example.StockCategory" />
+    </session-factory>
+</hibernate-configuration>
