@@ -3,17 +3,17 @@ package observer.example;
 import java.util.Arrays;
 import java.util.List;
 
-public class Testy {
+public class TestyTest {
 
 	public static void main(String[] args) {
 		
-		Category c1 = new Category();
-		Category c2 = new Category();
-		Category c3 = new Category();
-		Category c4 = new Category();
-		Category c5 = new Category();
+		CategoryTest c1 = new CategoryTest();
+		CategoryTest c2 = new CategoryTest();
+		CategoryTest c3 = new CategoryTest();
+		CategoryTest c4 = new CategoryTest();
+		CategoryTest c5 = new CategoryTest();
 		
-		List<Subject> categories = Arrays.asList(c1, c2, c3, c4, c5);
+		List<SubjectTest> categories = Arrays.asList(c1, c2, c3, c4, c5);
 		
 		new CategoryGroup(categories);
 		

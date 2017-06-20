@@ -3,12 +3,12 @@ package observer.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Category implements Subject {
+public class CategoryTest implements SubjectTest {
 	
 	private double value;
-	private List<Observer> observers;
+	private List<ObserverTest> observers;
 
-	public Category() {
+	public CategoryTest() {
 		this.observers = new ArrayList<>();
 		this.value = 0;
 	}
@@ -19,18 +19,18 @@ public class Category implements Subject {
 	}
 
 	@Override
-	public void registerObserver(Observer o) {
+	public void registerObserver(ObserverTest o) {
 		observers.add(o);
 	}
 
 	@Override
-	public void removeObserver(Observer o) {
+	public void removeObserver(ObserverTest o) {
 		observers.remove(o);
 	}
 
 	@Override
 	public void notifyObservers() {
-		for (Observer o : observers) {	
+		for (ObserverTest o : observers) {	
 			o.update(value);
 		}
 	}

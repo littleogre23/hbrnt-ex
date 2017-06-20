@@ -1,6 +1,6 @@
 package observer.example;
 
-public interface Observer {
+public interface ObserverTest {
 	
 	public void update(double categoryValue);
 }

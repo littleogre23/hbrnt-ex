@@ -2,16 +2,16 @@ package observer.example;
 
 import java.util.List;
 
-public class CategoryGroup implements Observer{
+public class CategoryGroup implements ObserverTest{
 	
-	private List<Subject> categories;
+	private List<SubjectTest> categories;
 	private double categoryGroupTotal;
 
-	public CategoryGroup(List<Subject> categs) {
+	public CategoryGroup(List<SubjectTest> categs) {
 		this.categoryGroupTotal = 0;
 		this.categories = categs;
 		
-		for (Subject category : categories) {
+		for (SubjectTest category : categories) {
 			category.registerObserver(this);
 		}
 	}
